@@ -1,0 +1,303 @@
+
+.cart-status-image {
+    margin-right: 50px;
+    width: 435px;
+    height: 66px;
+}
+
+.section {
+    width: 60%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.section-main-cart-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #F7D22D;
+    margin-bottom: 20px;
+
+}
+
+.cart-card {
+    gap: 20px;
+}
+
+.cart-card-image {
+    width: 71px;
+    min-width: 71px;
+    height: 71px;
+    min-height: 71px;
+}
+
+.cart-card-content-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0E0C0D;
+}
+
+.cart-card-content-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #686466;
+}
+
+.cart-card-prize {
+    font-size: 24px;
+    font-weight: 800;
+    color: #F7D22D;
+}
+
+.cart-card-amount-switcher {
+    background-color: #F3F3F7;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: #696F7A;
+    width: 93px;
+    min-width: 93px;
+}
+
+.button-switcher {
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #696F7A;
+}
+
+.button-switcher i:hover{
+    color:#F7D22D ;
+}
+
+.cart-card-delete-button {
+    border: none;
+    background: none;
+    width: 27px;
+    min-width: 27px;
+    height: 27px;
+    min-height: 27px;
+    padding: 0;
+    align-items: center;
+}
+
+.section-main-cart {
+    margin-top: 130px;
+    text-align: start;
+}
+
+.section-main-cart-content {
+    border-top: 1px solid #ECECF1;
+}
+
+.cart-card {
+    padding: 15px 0;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ECECF1;
+}
+
+.section-add-more-title,
+.section-souses-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F7D22D;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.section-add-more-positions {
+    gap: 20px;
+    position: relative;
+}
+
+.section-add-more-position {
+    width: 255px;
+    height: 99px;
+    border: 1.5px solid #E2E2E9;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: start;
+    gap: 10px;
+}
+
+.section-add-more-position:hover {
+    border: 2.5px solid #F7D22D66;
+}
+
+.section-add-more-position-image {
+    width: 71px;
+    height: 71px;
+    min-width: 71px;
+    min-height: 71px;
+}
+
+.section-add-more-position-content-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    padding-top: 10px;
+}
+
+.section-add-more-position-content-subtitle,
+.card-souse-prize {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FF2E65;
+}
+
+.positions-switcher {
+    position: absolute;
+    width: 108.5%;
+    left: -40px;
+    top: 33px;
+}
+
+.positions-switcher-button {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 31px;
+    height: 31px;
+    min-width: 31px;
+    min-height: 31px;
+}
+
+.section-souses {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.section-souses-content {
+    justify-content: space-between;
+    width: 100%;    
+}
+
+.card-souse {
+    border: 1.5px solid #E2E2E9;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: baseline;
+    padding: 0;
+    width: 100px;
+    min-width: 100px;
+    height: 163px;
+    min-height: 163px;
+}
+
+.card-souse-image {
+    width: 64.78px;
+    height: 71px;
+    min-width: 64.78px;
+    min-height: 71px;
+}
+
+.card-souse-content {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 15px;
+    height: 30%;
+}
+
+.section-promo-and-prize-title {
+    text-align: start;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 46, 101, 1);
+    margin-bottom: 20px;
+}
+
+.promo-enter {
+    border: 1.5px solid rgba(226, 226, 233, 1);
+    border-radius: 8px;
+    width: 40%;
+}
+
+input[type=text]
+{
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    height: 100% !important;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0E0C0D;
+    width: 60%;
+    border-radius: 8px 0 0 8px;
+}
+
+#promo-input ::placeholder {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(104, 100, 102, 1);
+}
+
+.add-promocode-button {
+    background-color: rgba(247, 210, 45, 1);
+    width: 40%;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(35, 31, 32, 1);
+}
+
+.order-prize {
+    gap: 25px;
+    padding-left: 20px;
+}
+
+.order-prize-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(14, 12, 13, 1);
+}
+
+.order-prize-prize {
+    font-size: 36px;
+    font-weight: 800;
+    color: rgba(247, 210, 45, 1);
+}
+
+.section-bottom-buttons {
+    height: 105px;
+}
+
+.button-back-to-main {
+    border: none;
+    padding: 0;
+    gap: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(105, 111, 122, 1);
+}
+
+.button-back-to-main:hover {
+    color: rgba(105, 111, 122, 1);
+}
+
+.fa-chevron-left {
+    font-weight: 900;
+}
+
+.button-make-order {
+    gap: 15px;
+    background-color: rgba(247, 210, 45, 1);
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 800;
+    color: rgba(35, 31, 32, 1);
+    justify-content: right;
+    height: 100%;
+    width: 224px;
+}
+
+.fa-chevron-right {
+    font-weight: 900;
+}

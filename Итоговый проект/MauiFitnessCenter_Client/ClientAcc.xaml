@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ClientAcc"
+             Title="ClientAcc">
+	<VerticalStackLayout Padding="40, 10, 40, 10" Spacing="10">
+        <Label 
+            Text="Ваш Аккаунт"
+			FontSize="28"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+		<Label x:Name="labelFIO" FontSize="18" Text="ФИО: "/>
+		<Label x:Name="labelBirthday" FontSize="18" Text="Дата рождения: "/>
+		<Label x:Name="labelAdres" FontSize="18" Text="Адрес: "/>
+		<Label x:Name="labelPhone" FontSize="18" Text="Телефон: "/>
+
+		<Label 
+            x:Name="labelSeasonTicketId" Text="Ваш Абонемент Номер " FontSize="24"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+		<Label x:Name="labelTrainingType" FontSize="18" Text="Тип тренировки: "/>
+		<Label x:Name="labelServiceType" FontSize="18" Text="Тип услуги: "/>
+		<Label x:Name="labelTicketPrice" FontSize="18" Text="Цена: "/>
+		<Label x:Name="labelAmountVisits" FontSize="18" Text="Число посещений: "/>
+		<Label x:Name="labelTimeActive" FontSize="18" Text="Активен: "/>
+		<Label x:Name="labelRemainVisits" FontSize="18" Text="Осталось посещений: "/>
+
+		<Button Text="Вернуться назад" Clicked="ButtonExit_Click"/>
+	</VerticalStackLayout>
+</ContentPage>

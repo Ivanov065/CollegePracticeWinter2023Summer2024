@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ManageSchedule"
+             Title="ManageSchedule">
+	<ContentPage.MenuBarItems>
+		<MenuBarItem x:Name="ModeToolStripMenuItem" Text="Режим">
+			<MenuFlyoutItem Text="Добавить" Clicked="AddMenuFlyoutItem_Click"/>
+			<MenuFlyoutItem Text="Обновить" Clicked="UpdateMenuFlyoutItem_Click"/>
+			<MenuFlyoutItem Text="Удалить" Clicked="DeleteMenuFlyoutItem_Click"/>
+		</MenuBarItem>
+	</ContentPage.MenuBarItems>
+	<VerticalStackLayout Padding="40, 10, 40, 10" Spacing="30" HorizontalOptions="Center">
+        <Label 
+			x:Name="labelTitle"
+            Text="Режим Добавления Расписания"
+			FontSize="28" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+		<Grid ColumnSpacing="30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<VerticalStackLayout Spacing="15" Grid.Column="0">
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Дата проведения: "  FontSize="18"/>
+					<DatePicker x:Name="datePickerDateConduction" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Время проведения: с " FontSize="18"/>
+					<TimePicker x:Name="timePickerTimeStart"  FontSize="16" Format="hh:mm:ss"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text=" до " FontSize="18"/>
+					<TimePicker x:Name="timePickerTimeEnd" FontSize="16" Format="hh:mm:ss"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout>
+					<Label Text="Тип тренировки: " FontSize="18"/>
+					<Picker x:Name="pickerTrainingTypes" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout>
+					<Label Text="Тип услуги: " FontSize="18"/>
+					<Picker x:Name="pickerServiceTypes" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout>
+					<Label Text="Тренер: " FontSize="18"/>
+					<Picker x:Name="pickerTrainers" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="15" Grid.Column="1">
+				<HorizontalStackLayout Spacing="10">
+					<Label x:Name="labelScheduleCode" Text="Код расписания: " FontSize="18"/>
+					<Entry x:Name="entryScheduleCode" MaximumWidthRequest="150"
+							MinimumWidthRequest="150" FontSize="16"/>
+				</HorizontalStackLayout>
+				<Button x:Name="buttonFindSchedule" Text="Найти" Clicked="ButtonFindSchedule_Click"/>
+			</VerticalStackLayout>
+		</Grid>
+		<HorizontalStackLayout Spacing="150">
+			<Button Text="Вернуться назад" Clicked="ButtonExit_Click"/>
+			<Button x:Name="buttonEdit" Text="Выполнить " Clicked="ButtonEdit_Click"/>
+		</HorizontalStackLayout>
+	</VerticalStackLayout>
+</ContentPage>

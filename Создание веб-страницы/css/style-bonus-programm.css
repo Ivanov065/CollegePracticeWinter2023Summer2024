@@ -1,0 +1,43 @@
+
+.section-main {
+    margin-top: 150px;
+    width: 80%;
+    align-items: start;
+    gap: 20px;
+    text-align: start;
+}
+
+.section-main-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: rgba(247, 210, 45, 1);
+}
+
+.input-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(35, 31, 32, 1);
+    margin-bottom: 10px;
+}
+
+.button-send-bonus-money {
+    border: none;
+    background-color: rgba(247, 210, 45, 1);
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(35, 31, 32, 1);
+}
+
+input[type=tel]
+{
+    padding-left: 10px;
+    border: 1.5px solid rgba(227, 236, 245, 1);
+    outline: none;
+    height: 100% !important;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0E0C0D;
+    width: 350px;
+    height: 48;
+    border-radius: 8px 0 0 8px;
+}

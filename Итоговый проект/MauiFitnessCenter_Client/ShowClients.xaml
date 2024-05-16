@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:MauiFitnessCenter_Client"
+             x:Class="MauiFitnessCenter_Client.ShowClients"
+             Title="ShowClients">
+	<ScrollView>
+		<VerticalStackLayout  HorizontalOptions="Center" Spacing="10" Padding="40, 10, 40, 10">
+			<Label 
+				Text="Список Всех Клиентов" FontSize="28" FontAttributes="Bold"
+				VerticalOptions="Center" 
+				HorizontalOptions="Center" />
+			<syncfusion:SfDataGrid x:Name="dataGridClients"
+								   GridLinesVisibility="Both" HeaderGridLinesVisibility="Both"
+								   ColumnWidthMode="Fill"></syncfusion:SfDataGrid>
+			<HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+				<Label Text="Введите ID клиента, чтобы увидеть активный абонемент"
+					   FontSize="16" VerticalTextAlignment="Center"/>
+				<Entry x:Name="entryClientCode" Placeholder="Код клиента"
+					   MinimumWidthRequest="100" MaximumWidthRequest="100"/>
+				<Button Text="Найти" Clicked="ButtonFindTicket_Click"/>
+			</HorizontalStackLayout>
+			<Label 
+				x:Name="labelTicketId" FontSize="22" FontAttributes="Bold"
+				Text="Информация Абонемента"
+				VerticalOptions="Center" 
+				HorizontalOptions="Center" />
+			<VerticalStackLayout Spacing="10">
+				<Label x:Name="labelTicketTemplateCode" FontSize="18" Text="Код шаблона абонемента: "/>
+				<Label x:Name="labelClientCode" FontSize="18" Text="Код Клиента: "/>
+				<Label x:Name="labelTimeActive" FontSize="18" Text="Время работы: "/>
+				<Label x:Name="labelLastVisits" FontSize="18" Text="Осталось посещений: "/>
+				<Label x:Name="labelTrainingType" FontSize="18" Text="Тип тренировки: "/>
+				<Label x:Name="labelServiceType" FontSize="18" Text="Тип Услуги: "/>
+			</VerticalStackLayout>
+			<Button Text="Вернуться назад" Clicked="ButtonExit_Click"/>
+		</VerticalStackLayout>
+	</ScrollView>
+</ContentPage>

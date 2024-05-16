@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ClientMenu"
+             Title="ClientMenu">
+	<Shell.BackButtonBehavior>
+		<BackButtonBehavior  IsVisible="False" />
+	</Shell.BackButtonBehavior>
+	<VerticalStackLayout HorizontalOptions="Center" Padding="40, 10, 40, 10" Spacing="15">
+        <Label 
+            Text="Добро пожаловать" FontSize="28" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+		<VerticalStackLayout Spacing="30">
+			<Button Text="Посмотреть аккаунт" Clicked="ButtonShowClientAcc_Click"/>
+			<Button Text="Посмотреть расписание" Clicked="ButtonShowSchedule_Click"/>
+			<Button Text="Посмотреть Абонементы" Clicked="ButtonShowSeasonTickets_Click"/>
+			<Button Text="Выход" Clicked="ButtonExit_Click"/>
+		</VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

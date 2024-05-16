@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ManageAbonements"
+             Title="ManageAbonements">
+	<ContentPage.MenuBarItems>
+		<MenuBarItem x:Name="ModeToolStripMenuItem" Text="Режим">
+			<MenuFlyoutItem Text="Добавить" Clicked="AddMenuFlyoutItem_Click"/>
+			<MenuFlyoutItem Text="Обновить" Clicked="UpdateMenuFlyoutItem_Click"/>
+		</MenuBarItem>
+	</ContentPage.MenuBarItems>
+	<VerticalStackLayout Padding="40, 10, 40, 10" Spacing="30" HorizontalOptions="Center">
+        <Label 
+			x:Name="labelTitle"
+            Text="Режим Добавления Элементов"
+			FontSize="28" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+		<Grid ColumnSpacing="30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<VerticalStackLayout Spacing="15" Grid.Column="0">
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Тип тренировки: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Picker x:Name="pickerTrainingTypes" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Тип услуги: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Picker x:Name="pickerServiceTypes" MaximumWidthRequest="250"
+							MinimumWidthRequest="250" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Цена: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryPrice" MaximumWidthRequest="150"
+						   MinimumWidthRequest="150" FontSize="16"/>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="15" Grid.Column="1">
+				<HorizontalStackLayout Spacing="10">
+					<Label x:Name="labelTicketCode" Text="Код абонемента: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryTicketCode" MaximumWidthRequest="100" VerticalTextAlignment="Center"
+						   MinimumWidthRequest="100" FontSize="16"/>
+					<Button x:Name="buttonFindTicket" Text="Найти" Clicked="ButtonFindTicket_Click"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Кол-во посещений: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryVisitsAmount" MaximumWidthRequest="150"
+						   MinimumWidthRequest="150" FontSize="16"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Длительность (дней): " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryTicketDuration" MaximumWidthRequest="150"
+						   MinimumWidthRequest="150" FontSize="16"/>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+		</Grid>
+		<HorizontalStackLayout VerticalOptions="Center" Spacing="150">
+			<Button Text="Вернуться назад" Clicked="ButtonExit_Click"/>
+			<Button x:Name="buttonEdit" Text="Выполнить" Clicked="ButtonEdit_Click"/>
+		</HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

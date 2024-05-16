@@ -1,0 +1,23 @@
+.adres {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0E0C0D;
+}
+
+.deliv-subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0E0C0D;
+}
+
+.section-main {
+    width: 80%;
+    text-align: start;
+    margin-top: 130px;
+}
+
+.section-pay-delivery-map {
+    padding-bottom:41%;
+    margin-bottom: 15px;
+}
+

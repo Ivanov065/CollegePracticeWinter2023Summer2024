@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ManagerMenu"
+             Title="ManagerMenu">
+	<Shell.BackButtonBehavior>
+		<BackButtonBehavior  IsVisible="False" />
+	</Shell.BackButtonBehavior>
+	<VerticalStackLayout HorizontalOptions="Center" Padding="40, 10, 40, 10" Spacing="15">
+        <Label 
+            Text="Добро пожаловать"  FontSize="28" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+		<Grid VerticalOptions="Center" ColumnSpacing="30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<VerticalStackLayout Spacing="30" Grid.Column="0" MinimumWidthRequest="300">
+				<Label Text="Посмотреть" FontSize="22" HorizontalTextAlignment="Center"/>
+				<Button Text="Мой аккаунт" Clicked="buttonEmpAcc_Click"/>
+				<Button Text="Абонементы" Clicked="ButtonShowTickets_Click"/>
+				<Button Text="Тренеры" Clicked="ButtonShowTrainers_Click"/>
+				<Button Text="Расписание" Clicked="ButtonShowSchedule_Click"/>
+				<Button Text="Клиенты" Clicked="ButtonShowClients_Click"/>
+			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="30" Grid.Column="1" MinimumWidthRequest="300">
+				<Label Text="Удалить/Обновить/Добавить" FontSize="22" HorizontalTextAlignment="Center"/>
+				<Button Text="Абонементы" Clicked="ButtonManageTickets_Click"/>
+				<Button Text="Расписание" Clicked="ButtonManageSchedule_Click"/>
+				<Button Text="Клиентов" Clicked="ButtonManageClients_Click"/>
+				<Button Text="Выйти" Clicked="ButtonExit_Click"/>
+			</VerticalStackLayout>
+		</Grid>
+    </VerticalStackLayout>
+</ContentPage>

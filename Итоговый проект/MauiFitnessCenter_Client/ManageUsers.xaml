@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.ManageUsers"
+             Title="ManageUsers">
+	<ContentPage.MenuBarItems>
+		<MenuBarItem x:Name="ModeToolStripMenuItem" Text="Режим">
+			<MenuFlyoutItem Text="Добавить" Clicked="AddMenuFlyoutItem_Click"/>
+			<MenuFlyoutItem Text="Обновить" Clicked="UpdateMenuFlyoutItem_Click"/>
+			<MenuFlyoutItem Text="Удалить" Clicked="DeleteMenuFlyoutItem_Click"/>
+		</MenuBarItem>
+	</ContentPage.MenuBarItems>
+	<VerticalStackLayout Padding="40, 10, 40, 10" Spacing="30" HorizontalOptions="Center">
+        <Label 
+			x:Name="labelTitle"
+            Text="Режим Добавления Пользователя"
+			FontSize="28" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+		<Grid ColumnSpacing="30">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<VerticalStackLayout Spacing="15" Grid.Column="0">
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Имя: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryName" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Фамилия: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entrySurname" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Отчество: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryMiddlename" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Дата Рождения: " FontSize="18" VerticalTextAlignment="Center"/>
+					<DatePicker x:Name="datePickerBirthday" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Адрес: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryAdres" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="10" Grid.Column="1">
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Телефон: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryPhone" Text="+7" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Логин: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryLogin" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Пароль: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryPassword" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Пароль подтв.: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryPasswordConfirm" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label Text="Зарплата: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entrySalary" MinimumWidthRequest="150" FontSize="18"/>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+			<VerticalStackLayout Spacing="10" Grid.Column="2">
+				<HorizontalStackLayout Spacing="10">
+					<Label x:Name="labelUserCode" Text="Код польз.: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Entry x:Name="entryUserCode" MinimumWidthRequest="100" FontSize="18"/>
+					<Button x:Name="buttonFindUser" Text="Найти" Clicked="ButtonFindUser_Click"/>
+				</HorizontalStackLayout>
+				<HorizontalStackLayout Spacing="10">
+					<Label x:Name="labelUserRole" Text="Роль польз.: " FontSize="18" VerticalTextAlignment="Center"/>
+					<Picker x:Name="pickerUserRoles" MinimumWidthRequest="150" FontSize="16">
+					</Picker>
+				</HorizontalStackLayout>
+			</VerticalStackLayout>
+		</Grid>
+		<HorizontalStackLayout Spacing="300" VerticalOptions="Center">
+			<Button Text="Вернуться назад" Clicked="ButtonExit_Click"/>
+			<Button x:Name="buttonEdit" Text="Выполнить" Clicked="ButtonEdit_Click"/>
+		</HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

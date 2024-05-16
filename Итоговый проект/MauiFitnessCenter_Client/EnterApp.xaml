@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiFitnessCenter_Client.EnterApp">
+
+	<VerticalStackLayout Padding="40, 10, 40, 10" HorizontalOptions="Center">
+		<Label Text="Идентификация" FontSize="28" FontAttributes="Bold"/>
+		<VerticalStackLayout Padding="10" Spacing="10">
+			<Label Text="Логин" FontSize="20"/>
+			<Entry x:Name="entryLogin" Placeholder="Ваш логин"/>
+		</VerticalStackLayout>
+		<VerticalStackLayout Padding="10" Spacing="10">
+			<Label Text="Пароль" FontSize="20"/>
+			<Entry x:Name="entryPassword" Placeholder="Ваш пароль" IsPassword="True"/>
+		</VerticalStackLayout>
+		<HorizontalStackLayout VerticalOptions="Center" Padding="10" Spacing="60">
+			<Button Text="Выйти" Clicked="ButtonExit_Click"/>
+			<Button Text="Войти" Clicked="ButtonLogin_Click"/>
+		</HorizontalStackLayout>
+	</VerticalStackLayout>
+</ContentPage>
